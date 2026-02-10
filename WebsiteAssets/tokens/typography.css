@@ -1,0 +1,84 @@
+/* ==========================================================================
+   Daily Doctrine - Typography Design Tokens
+   Source: iOS Theme.swift
+   ========================================================================== */
+
+/* --------------------------------------------------------------------------
+   Custom Properties
+   -------------------------------------------------------------------------- */
+
+:root {
+  /* Font Stacks */
+  --dd-font-ui: -apple-system, BlinkMacSystemFont, "SF Pro Display", "SF Pro Text", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  --dd-font-serif: Georgia, "Times New Roman", "Noto Serif", serif;
+
+  /* Hero Quote (line-height 1.4 accounts for SwiftUI .lineSpacing(6)) */
+  --dd-text-hero-size: 28px;
+  --dd-text-hero-weight: 500;
+  --dd-text-hero-line-height: 1.4;
+
+  /* Section Title */
+  --dd-text-section-title-size: 13px;
+  --dd-text-section-title-weight: 600;
+  --dd-text-section-title-line-height: 1.2;
+  --dd-text-section-title-spacing: 1.2px;
+
+  /* Body */
+  --dd-text-body-size: 16px;
+  --dd-text-body-weight: 400;
+  --dd-text-body-line-height: 1.5;
+
+  /* Caption */
+  --dd-text-caption-size: 13px;
+  --dd-text-caption-weight: 400;
+  --dd-text-caption-line-height: 1.4;
+
+  /* Label */
+  --dd-text-label-size: 11px;
+  --dd-text-label-weight: 500;
+  --dd-text-label-line-height: 1.2;
+  --dd-text-label-spacing: 0.8px;
+}
+
+/* --------------------------------------------------------------------------
+   Utility Classes
+   -------------------------------------------------------------------------- */
+
+.dd-hero-quote {
+  font-family: var(--dd-font-serif);
+  font-size: var(--dd-text-hero-size);
+  font-weight: var(--dd-text-hero-weight);
+  line-height: var(--dd-text-hero-line-height);
+}
+
+.dd-section-title {
+  font-family: var(--dd-font-ui);
+  font-size: var(--dd-text-section-title-size);
+  font-weight: var(--dd-text-section-title-weight);
+  line-height: var(--dd-text-section-title-line-height);
+  letter-spacing: var(--dd-text-section-title-spacing);
+  text-transform: uppercase;
+}
+
+.dd-body {
+  font-family: var(--dd-font-ui);
+  font-size: var(--dd-text-body-size);
+  font-weight: var(--dd-text-body-weight);
+  line-height: var(--dd-text-body-line-height);
+}
+
+.dd-caption {
+  font-family: var(--dd-font-ui);
+  font-size: var(--dd-text-caption-size);
+  font-weight: var(--dd-text-caption-weight);
+  line-height: var(--dd-text-caption-line-height);
+}
+
+.dd-label {
+  font-family: var(--dd-font-ui);
+  font-size: var(--dd-text-label-size);
+  font-weight: var(--dd-text-label-weight);
+  line-height: var(--dd-text-label-line-height);
+  letter-spacing: var(--dd-text-label-spacing);
+  text-transform: uppercase;
+}

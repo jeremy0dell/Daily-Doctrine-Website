@@ -1,122 +1,198 @@
-* {
+/* === RESET === */
+*, *::before, *::after {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
 }
 
+/* === DESIGN TOKENS === */
 :root {
-  --max-width: 680px;
-  --text-primary: #1a1a1a;
-  --text-secondary: #666;
-  --bg: #fafafa;
-  --link: #0066cc;
+  /* Background */
+  --dd-bg-primary: #000000;
+  --dd-bg-secondary: #141414;
+  --dd-bg-tertiary: #1F1F1F;
+  --dd-bg-elevated: #242424;
+
+  /* Text */
+  --dd-text-primary: #F2F2F2;
+  --dd-text-secondary: #999999;
+  --dd-text-tertiary: #666666;
+
+  /* Accent */
+  --dd-accent: #D9BF8C;
+  --dd-accent-muted: rgba(217, 191, 140, 0.30);
+
+  /* Semantic */
+  --dd-success: rgba(52, 199, 89, 0.80);
+  --dd-destructive: rgba(255, 59, 48, 0.80);
+  --dd-pro-badge: #E6B34D;
+
+  /* Brand */
+  --dd-icon-bg: #0D0D14;
+  --dd-icon-text: #F2E6CC;
+
+  /* Typography */
+  --dd-font-ui: -apple-system, BlinkMacSystemFont, "SF Pro Display", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  --dd-font-serif: Georgia, "Times New Roman", "Noto Serif", serif;
+
+  /* Spacing */
+  --dd-space-xs: 4px;
+  --dd-space-sm: 8px;
+  --dd-space-md: 16px;
+  --dd-space-lg: 24px;
+  --dd-space-xl: 40px;
+  --dd-space-2xl: 64px;
+  --dd-space-3xl: 96px;
+
+  /* Layout */
+  --dd-max-width: 1120px;
+  --dd-content-width: 680px;
 }
 
-html,
-body {
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-  background: var(--bg);
-  color: var(--text-primary);
+/* === BASE === */
+html {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+}
+
+html, body {
+  font-family: var(--dd-font-ui);
+  background: var(--dd-bg-primary);
+  color: var(--dd-text-primary);
   line-height: 1.6;
+  min-height: 100vh;
 }
 
-main {
-  max-width: var(--max-width);
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+a {
+  color: var(--dd-accent);
+  text-decoration: none;
+  transition: opacity 0.2s ease;
+}
+
+a:hover {
+  opacity: 0.8;
+}
+
+/* === GLOBAL FOOTER === */
+.site-footer {
+  max-width: var(--dd-max-width);
   margin: 0 auto;
-  padding: 3rem 1.5rem 6rem;
-  min-height: calc(100vh - 80px);
+  padding: var(--dd-space-lg) var(--dd-space-md);
+  border-top: 1px solid var(--dd-bg-tertiary);
+  font-size: 13px;
+  color: var(--dd-text-tertiary);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: var(--dd-space-sm);
 }
 
-h1 {
+.site-footer a {
+  color: var(--dd-text-tertiary);
+  font-size: 13px;
+}
+
+.site-footer a:hover {
+  color: var(--dd-text-secondary);
+}
+
+.footer-links {
+  display: flex;
+  gap: var(--dd-space-lg);
+  flex-wrap: wrap;
+}
+
+/* === APP STORE BADGE === */
+.app-store-badge {
+  display: inline-block;
+  transition: opacity 0.2s ease;
+}
+
+.app-store-badge:hover {
+  opacity: 0.8;
+}
+
+.app-store-badge svg {
+  height: 48px;
+  width: auto;
+}
+
+/* === UTILITIES === */
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+/* === LEGACY STYLES FOR EXISTING PAGES === */
+.legal-page,
+.support-page {
+  max-width: var(--dd-content-width);
+  margin: 0 auto;
+  padding: 48px 20px 96px;
+}
+
+.legal-page h1,
+.support-page h1 {
   font-size: 2rem;
   font-weight: 600;
   margin-bottom: 1rem;
 }
 
-h2 {
+.legal-page h2,
+.support-page h2 {
   font-size: 1.25rem;
   font-weight: 600;
   margin-top: 2rem;
   margin-bottom: 0.75rem;
 }
 
-h3 {
+.legal-page h3,
+.support-page h3 {
   font-size: 1.1rem;
   font-weight: 600;
   margin-top: 1.5rem;
   margin-bottom: 0.5rem;
 }
 
-p {
+.legal-page p,
+.support-page p {
   margin-bottom: 1rem;
-  color: var(--text-secondary);
+  color: var(--dd-text-secondary);
 }
 
-a {
-  color: var(--link);
-  text-decoration: none;
-}
-
-a:hover {
-  text-decoration: underline;
-}
-
-ul {
+.legal-page ul,
+.support-page ul {
   margin: 0.5rem 0 1rem 1.5rem;
-  color: var(--text-secondary);
+  color: var(--dd-text-secondary);
 }
 
-li {
+.legal-page li,
+.support-page li {
   margin-bottom: 0.5rem;
 }
 
-.subtitle {
-  font-size: 1.1rem;
-  color: var(--text-secondary);
-  margin-bottom: 2rem;
-}
-
-.links {
-  display: flex;
-  gap: 1.5rem;
-  margin-top: 2rem;
+.legal-page a,
+.support-page a {
+  color: var(--dd-accent);
 }
 
 .last-updated {
   margin-top: 3rem;
   font-size: 0.875rem;
-  color: var(--text-secondary);
-}
-
-footer {
-  max-width: var(--max-width);
-  margin: 0 auto;
-  padding: 1.5rem;
-  border-top: 1px solid #e5e5e5;
-  font-size: 0.875rem;
-  color: var(--text-secondary);
-  display: flex;
-  justify-content: space-between;
-  flex-wrap: wrap;
-  gap: 0.5rem;
-}
-
-@media (max-width: 480px) {
-  main {
-    padding: 2rem 1rem 4rem;
-  }
-
-  h1 {
-    font-size: 1.5rem;
-  }
-
-  .links {
-    flex-direction: column;
-    gap: 0.75rem;
-  }
-
-  footer {
-    flex-direction: column;
-    text-align: center;
-  }
+  color: var(--dd-text-tertiary);
 }

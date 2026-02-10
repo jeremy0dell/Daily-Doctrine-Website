@@ -1,0 +1,31 @@
+/* ==========================================================================
+   Daily Doctrine - Color Design Tokens
+   Source: iOS Theme.swift (dark theme as default)
+   ========================================================================== */
+
+:root {
+  /* Background */
+  --dd-bg-primary: #000000;
+  --dd-bg-secondary: #141414;
+  --dd-bg-tertiary: #1F1F1F;
+  --dd-bg-elevated: #242424;
+
+  /* Text */
+  --dd-text-primary: #F2F2F2;
+  --dd-text-secondary: #999999;
+  --dd-text-tertiary: #666666;
+
+  /* Accent */
+  --dd-accent: #D9BF8C;
+  --dd-accent-muted: rgba(217, 191, 140, 0.30);
+
+  /* Semantic */
+  --dd-success: rgba(52, 199, 89, 0.80);
+  --dd-destructive: rgba(255, 59, 48, 0.80);
+  --dd-pro-badge: #E6B34D;
+  --dd-pro-badge-bg: rgba(230, 179, 77, 0.15);
+
+  /* Brand */
+  --dd-icon-bg: #0D0D14;
+  --dd-icon-text: #F2E6CC;
+}

@@ -1,0 +1,59 @@
+{
+  "fontStacks": {
+    "ui": {
+      "value": "-apple-system, BlinkMacSystemFont, \"SF Pro Display\", \"SF Pro Text\", \"Helvetica Neue\", Helvetica, Arial, sans-serif",
+      "description": "System UI font stack, used for interface elements and body text"
+    },
+    "serif": {
+      "value": "Georgia, \"Times New Roman\", \"Noto Serif\", serif",
+      "description": "Serif / display font stack, used for quotes and editorial content"
+    }
+  },
+  "typeScale": {
+    "heroQuote": {
+      "fontFamily": "serif",
+      "fontSize": "28px",
+      "fontWeight": 500,
+      "lineHeight": 1.4,
+      "letterSpacing": "normal",
+      "textTransform": "none",
+      "description": "Large quote display on home screen and marketing hero sections. Line-height 1.4 accounts for SwiftUI .lineSpacing(6)"
+    },
+    "sectionTitle": {
+      "fontFamily": "ui",
+      "fontSize": "13px",
+      "fontWeight": 600,
+      "lineHeight": 1.2,
+      "letterSpacing": "1.2px",
+      "textTransform": "uppercase",
+      "description": "Section headers, category labels"
+    },
+    "body": {
+      "fontFamily": "ui",
+      "fontSize": "16px",
+      "fontWeight": 400,
+      "lineHeight": 1.5,
+      "letterSpacing": "normal",
+      "textTransform": "none",
+      "description": "Default body text for paragraphs and descriptions"
+    },
+    "caption": {
+      "fontFamily": "ui",
+      "fontSize": "13px",
+      "fontWeight": 400,
+      "lineHeight": 1.4,
+      "letterSpacing": "normal",
+      "textTransform": "none",
+      "description": "Supporting text, attribution lines, timestamps"
+    },
+    "label": {
+      "fontFamily": "ui",
+      "fontSize": "11px",
+      "fontWeight": 500,
+      "lineHeight": 1.2,
+      "letterSpacing": "0.8px",
+      "textTransform": "uppercase",
+      "description": "Small uppercase labels, badges, chip text"
+    }
+  }
+}

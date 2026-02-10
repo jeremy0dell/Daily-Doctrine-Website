@@ -1,0 +1,72 @@
+{
+  "brand": {
+    "iconBackground": {
+      "value": "#0D0D14",
+      "description": "App icon / lockup background"
+    },
+    "iconText": {
+      "value": "#F2E6CC",
+      "description": "App icon / lockup text and foreground elements"
+    }
+  },
+  "background": {
+    "primary": {
+      "value": "#000000",
+      "description": "Main app background, root-level surfaces"
+    },
+    "secondary": {
+      "value": "#141414",
+      "description": "Cards, grouped sections, secondary surfaces"
+    },
+    "tertiary": {
+      "value": "#1F1F1F",
+      "description": "Nested elements within secondary surfaces"
+    },
+    "elevated": {
+      "value": "#242424",
+      "description": "Modals, popovers, elevated sheets"
+    }
+  },
+  "text": {
+    "primary": {
+      "value": "#F2F2F2",
+      "description": "Main body text, headings (opacity 0.95 equivalent)"
+    },
+    "secondary": {
+      "value": "#999999",
+      "description": "Supporting text, captions, metadata (opacity 0.60 equivalent)"
+    },
+    "tertiary": {
+      "value": "#666666",
+      "description": "Disabled or placeholder text (avoid in most contexts)"
+    }
+  },
+  "accent": {
+    "default": {
+      "value": "#D9BF8C",
+      "description": "Primary accent color, interactive elements, links"
+    },
+    "muted": {
+      "value": "rgba(217, 191, 140, 0.30)",
+      "description": "Accent at 30% opacity, used for subtle highlights and backgrounds"
+    }
+  },
+  "semantic": {
+    "success": {
+      "value": "rgba(52, 199, 89, 0.80)",
+      "description": "Success states, confirmations, positive indicators"
+    },
+    "destructive": {
+      "value": "rgba(255, 59, 48, 0.80)",
+      "description": "Destructive actions, errors, warnings"
+    },
+    "proBadge": {
+      "value": "#E6B34D",
+      "description": "Premium badge foreground text and icon color"
+    },
+    "proBadgeBackground": {
+      "value": "rgba(230, 179, 77, 0.15)",
+      "description": "Premium badge background fill at 15% opacity"
+    }
+  }
+}
