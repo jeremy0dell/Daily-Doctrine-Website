@@ -1,4 +1,5 @@
 import type { Metadata } from 'next'
+import { appStoreUrl } from '../../lib/appStore'
 
 interface SharePayload {
   q: string    // quote text
@@ -96,14 +97,8 @@ export default async function SharePage({ params }: Props) {
 
       <div style={styles.cta}>
         <a
-          href={`dailydoctrine://s/${payload}`}
+          href={appStoreUrl('share_page')}
           style={styles.primaryButton}
-        >
-          Open in App
-        </a>
-        <a
-          href="https://apps.apple.com/app/daily-doctrine/id6740043938"
-          style={styles.secondaryButton}
         >
           Get Daily Doctrine
         </a>

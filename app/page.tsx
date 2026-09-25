@@ -40,12 +40,12 @@ const features = [
     desc: 'Turn any quote into a clean, ready-made wallpaper. One tap \u2014 no design app needed.',
   },
   {
-    title: 'Favorites',
-    desc: 'Save the ones that hit different. Build your personal collection of wisdom.',
+    title: 'Reminders',
+    desc: 'A gentle nudge at the time you choose, so the day\u2019s line reaches you before the noise does.',
   },
 ]
 
-const packs = ['Stoic', 'Scripture', 'Modern Grit', 'Discipline', 'Composure', 'Focus']
+const packs = ['Discipline', 'Stoic Wisdom', 'Scripture', 'Philosophy', 'Modern Discipline']
 
 export default function Home() {
   return (
@@ -64,9 +64,9 @@ export default function Home() {
           <h1 className="v5-hero-title">Daily Doctrine</h1>
           <p className="v5-hero-tagline">A line of discipline, every morning.</p>
           <div className="v5-hero-badge">
-            <AppStoreBadge />
+            <AppStoreBadge campaign="website_hero" />
           </div>
-          <p className="v5-hero-note">Free with optional Pro upgrade</p>
+          <p className="v5-hero-note">Free to start. Premium is a one-time purchase.</p>
           <div className="v5-hero-phone">
             <Image
               src="/screenshots/01-home-stoic.png"
@@ -100,12 +100,13 @@ export default function Home() {
             Quote Packs
           </h2>
           <p className="v5-packs-desc">
-            Explore themed collections designed for composure, focus, and quiet strength.
+            Discipline and Stoic Wisdom are free. Premium unlocks every pack, premium wallpapers, and
+            removes ads &mdash; one purchase, no subscription.
           </p>
           <div className="v5-packs-phone">
             <Image
               src="/screenshots/04-packs.png"
-              alt="Quote pack collection featuring Stoic, Scripture, Modern Grit, and more"
+              alt="Quote pack library featuring Discipline, Stoic Wisdom, Scripture, and more"
               width={280}
               height={560}
               className="v5-phone-frame"
@@ -147,7 +148,7 @@ export default function Home() {
           Start your morning ritual.
         </h2>
         <div className="v5-cta-badge">
-          <AppStoreBadge />
+          <AppStoreBadge campaign="website_cta" />
         </div>
         <p className="v5-cta-note">Available for iPhone</p>
       </section>

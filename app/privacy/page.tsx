@@ -45,7 +45,7 @@ export default function Privacy() {
         </ul>
         <p>
           You can change this setting anytime in Settings &gt; Privacy &amp; Security &gt; Tracking.
-          Pro users do not see any ads.
+          Premium users do not see any ads.
         </p>
         <p>
           For more information about how Google handles data, see{' '}
