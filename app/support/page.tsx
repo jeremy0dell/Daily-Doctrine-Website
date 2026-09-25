@@ -59,14 +59,15 @@ export default function Support() {
 
         <h3>Purchases &amp; Restore</h3>
         <p>
-          <strong>What does Pro unlock?</strong> Pro removes all ads and unlocks all current and
-          future quote packs. You can also purchase individual quote packs separately.
+          <strong>What does Premium unlock?</strong> Premium is a one-time purchase (no
+          subscription). It removes all ads, unlocks every quote pack, the premium wallpaper
+          templates, and sharing any line as an image card.
         </p>
         <p><strong>To restore purchases:</strong></p>
         <ul>
           <li>Open Daily Doctrine</li>
           <li>Go to Settings (gear icon)</li>
-          <li>Tap &ldquo;Restore Purchases&rdquo;</li>
+          <li>Tap &ldquo;Restore Purchase&rdquo;</li>
           <li>Sign in with the Apple ID you used for the original purchase if prompted</li>
         </ul>
         <p>

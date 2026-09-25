@@ -1,7 +1,15 @@
-export default function AppStoreBadge({ className }: { className?: string }) {
+import { appStoreUrl } from '../lib/appStore'
+
+export default function AppStoreBadge({
+  className,
+  campaign = 'website',
+}: {
+  className?: string
+  campaign?: string
+}) {
   return (
     <a
-      href="https://apps.apple.com/app/daily-doctrine/id6740091498"
+      href={appStoreUrl(campaign)}
       target="_blank"
       rel="noopener noreferrer"
       className={`app-store-badge ${className || ''}`}
