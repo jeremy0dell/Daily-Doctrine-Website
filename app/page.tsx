@@ -37,7 +37,7 @@ const features = [
   },
   {
     title: 'Wallpapers',
-    desc: 'Turn any quote into a clean, ready-made wallpaper. One tap \u2014 no design app needed.',
+    desc: 'Design a wallpaper with today\u2019s line. Start with Obsidian for free; Premium adds styles and photo-wallpaper export.',
   },
   {
     title: 'Reminders',
@@ -45,7 +45,7 @@ const features = [
   },
 ]
 
-const packs = ['Discipline', 'Stoic Wisdom', 'Scripture', 'Philosophy', 'Modern Discipline']
+const packs = ['Discipline', 'Stoic Wisdom', 'Stoic Deep Cuts', 'Scripture', 'Philosophy', 'Modern Discipline']
 
 export default function Home() {
   return (
@@ -66,7 +66,7 @@ export default function Home() {
           <div className="v5-hero-badge">
             <AppStoreBadge campaign="website_hero" />
           </div>
-          <p className="v5-hero-note">Free to start. Premium is a one-time purchase.</p>
+          <p className="v5-hero-note">Free daily line and widget. Premium is one purchase, no subscription.</p>
           <div className="v5-hero-phone">
             <Image
               src="/screenshots/01-home-stoic.png"
@@ -100,8 +100,10 @@ export default function Home() {
             Quote Packs
           </h2>
           <p className="v5-packs-desc">
-            Discipline and Stoic Wisdom are free. Premium unlocks every pack, premium wallpapers, and
-            removes ads &mdash; one purchase, no subscription.
+            Discipline and Stoic Wisdom are free, with saved favorites and a daily reminder. Premium
+            removes ads and adds every collection, personal principles, saved-line rotation,
+            photo-wallpaper export, Train a Trait, and up to three reminders &mdash; one purchase,
+            no subscription.
           </p>
           <div className="v5-packs-phone">
             <Image
