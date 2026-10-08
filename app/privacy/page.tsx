@@ -17,7 +17,7 @@ export default function Privacy() {
     <div className="v5-page">
       <main className="legal-page">
         <h1>Privacy Policy</h1>
-        <p className="last-updated">Last updated: October 5, 2026</p>
+        <p className="last-updated">Last updated: October 8, 2026</p>
         <h2>Your content and preferences</h2>
         <p>Daily Doctrine requires no account. Your chosen collections, saved lines, personal principles,
           reminder settings, and wallpaper designs are stored on your device. Personal principles and
@@ -42,6 +42,14 @@ export default function Privacy() {
           to IDFA; it does not stop all ad delivery or all non-identifying measurement. You can change
           the iOS choice in Settings &gt; Privacy &amp; Security &gt; Tracking.</p>
         <p>See <a href="https://policies.google.com/privacy" target="_blank" rel="noopener noreferrer">Google&apos;s Privacy Policy</a>.</p>
+        <h2>Apple Ads attribution</h2>
+        <p>Starting with version 1.3, we use Apple&apos;s AdServices to measure whether an installation
+          is attributed to an Apple Ads campaign. An attribution token is sent directly to Apple;
+          we do not store or log that token. We retain coarse campaign, ad group, and keyword identifiers,
+          attribution and download categories, and the first app version observed by this integration.
+          These fields accompany product analytics sent to TelemetryDeck. Missing attribution is not
+          treated as proof of an organic installation. Photos and personal principles are not sent
+          with this information.</p>
         <h2>Photos and notifications</h2>
         <p>Photo designs use the image you select through Apple&apos;s photo picker. Saving a wallpaper
           requests permission to add an image to Photos. The app does not upload your selected images.
