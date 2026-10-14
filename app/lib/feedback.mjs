@@ -1,5 +1,3 @@
-import { createHash } from 'node:crypto'
-
 const commonAnswers = {
   goal: ['discipline', 'focus', 'calm', 'reflect', 'other'],
   used: ['daily_line', 'widget', 'wallpaper', 'focus', 'saved_lines', 'trait', 'not_yet'],
@@ -53,16 +51,17 @@ export async function receiveFeedback(request, storage) {
     input = validateFeedback(JSON.parse(Buffer.concat(chunks).toString('utf8')))
   } catch { return respond({ error: 'Invalid message' }, 400) }
   if (!input) return respond({ error: 'Invalid message' }, 400)
-  const fingerprint = createHash('sha256').update(JSON.stringify(input)).digest('hex')
+  // App or OS updates can change metadata while a saved draft retries the same submission.
+  const content = ({ id, kind, message, answers, paid }) => JSON.stringify({ id, kind, message, answers, paid })
   const receipt = { id: input.id, kind: input.kind }
-  const existingResponse = existing => existing.fingerprint === fingerprint
+  const existingResponse = existing => content(existing) === content(input)
     ? respond(receipt, 200) : respond({ error: 'Submission ID already used' }, 409)
   try {
     const existing = await storage.read(input.id)
     if (existing) return existingResponse(existing)
     if (await storage.isFull()) return respond({ error: 'Feedback is temporarily unavailable. Please try again later.' }, 503)
     try {
-      await storage.write(input.id, { ...input, fingerprint, receivedAt: new Date().toISOString() })
+      await storage.write(input.id, { ...input, receivedAt: new Date().toISOString() })
     } catch {
       // An overlapping retry may have stored this ID; never overwrite a received answer.
       const received = await storage.read(input.id)
