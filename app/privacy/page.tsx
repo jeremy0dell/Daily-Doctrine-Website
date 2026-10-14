@@ -17,7 +17,7 @@ export default function Privacy() {
     <div className="v5-page">
       <main className="legal-page">
         <h1>Privacy Policy</h1>
-        <p className="last-updated">Last updated: October 8, 2026</p>
+        <p className="last-updated">Last updated: October 13, 2026</p>
         <h2>Your content and preferences</h2>
         <p>Daily Doctrine requires no account. Your chosen collections, saved lines, personal principles,
           reminder settings, and wallpaper designs are stored on your device. Personal principles and
@@ -54,6 +54,22 @@ export default function Privacy() {
         <p>Photo designs use the image you select through Apple&apos;s photo picker. Saving a wallpaper
           requests permission to add an image to Photos. The app does not upload your selected images.
           Optional reminders require notification permission and are scheduled on your device.</p>
+        <h2>Private feedback and product surveys</h2>
+        <p>If you choose Send Feedback or submit a product survey, we receive your message, selected
+          answers, app version, build, iOS version and whether you have free, trial or paid access.
+          These submissions use encrypted transport and private Vercel Blob storage. They are
+          available to the developer for support and product decisions; they are not public reviews.
+          No name or email is required. Please do not include personal, medical or payment information.
+          Feedback text and survey answers are not included in TelemetryDeck analytics.</p>
+        <p>Your draft stays on your device until you send it. You can copy the received submission&apos;s
+          reference in the app and contact us with that reference to request deletion. We retain
+          submissions while they are useful for support or product decisions. A survey reminder is
+          optional and sends one local notification after you opt in; it can be cancelled in the app.</p>
+        <p>Eligible users may claim one free 30-day Premium trial through Apple after their private
+          survey is received. The reward does not depend on positive answers or an App Store review.
+          Apple&apos;s verified original transaction date determines the trial&apos;s end; restoring
+          it does not restart the period. A permanent Premium purchase remains permanent. The trial
+          does not automatically charge or renew.</p>
         <h2>Purchases</h2>
         <p>Apple processes purchases and restores through the App Store. We use StoreKit transaction
           information to recognize Premium access and measure purchases. Apple manages payment information.</p>
