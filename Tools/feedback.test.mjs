@@ -43,6 +43,16 @@ test('concurrent retries store one copy', async () => {
   assert.deepEqual(responses.map(r => r.status).sort(), [200, 201])
   assert.equal(storage.records.size, 1)
 })
+test('metadata changes on retry keep the original submission and receipt', async () => {
+  const data = draft(), storage = store()
+  assert.equal((await receiveFeedback(request(data), storage)).status, 201)
+  const retry = { ...data, context: { appVersion: '1.5', build: '14', iosVersion: '27.1', access: 'paid' } }
+  const response = await receiveFeedback(request(retry), storage)
+  assert.equal(response.status, 200)
+  assert.deepEqual(await response.json(), { id: data.id, kind: data.kind })
+  assert.equal(storage.records.size, 1)
+  assert.deepEqual(storage.records.get(data.id).context, data.context)
+})
 test('size limits, empty messages and invalid paths or answers are rejected', async () => {
   for (const change of [{ message: ' ' }, { message: 'x'.repeat(2001) }, { id: '../../private' }, { context: { ...draft().context, appVersion: 'unknown' } }, { kind: 'rating' }]) {
     assert.equal((await receiveFeedback(request({ ...draft(), ...change }), store())).status, 400)
